@@ -46,6 +46,12 @@ public class BookServiceImpl implements Book_Interface {
 		return br.findAll();
 	}
 
+	@Override
+	public List<BorrowRequest> getAllByType() {
+		
+		return br.findByItemType("Book");
+	}
+
 }
 
 

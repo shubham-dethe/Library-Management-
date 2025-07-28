@@ -47,5 +47,12 @@ public class MagzineServiceImpl implements Book_Interface {
 		return bRepo.findAll();
 	}
 
+
+	@Override
+	public List<BorrowRequest> getAllByType() {
+		// TODO Auto-generated method stub
+		return bRepo.findByItemType("Magzine");
+	}
+
 }
 

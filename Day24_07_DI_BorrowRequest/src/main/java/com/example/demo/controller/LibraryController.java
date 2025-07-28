@@ -67,5 +67,21 @@ public class LibraryController {
 		return null;
 		
 	}
+	
+	@GetMapping("library/item/{itemType}")
+	public List<BorrowRequest> getAllItemByType(@PathVariable String itemType){
+		
+		if(itemType.equals("book")) {
+			return bobj.getAllByType();
+		}
+		
+		if(itemType.equals("Magzine")) {
+			return bobj1.getAllByType();
+		}
+		
+		
+		return null;
+		
+	}
 
 }

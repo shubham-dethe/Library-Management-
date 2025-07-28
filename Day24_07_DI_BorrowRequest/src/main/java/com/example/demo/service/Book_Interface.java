@@ -11,5 +11,7 @@ public interface Book_Interface {
 	public BorrowRequest getById(int id);
 	
 	public List<BorrowRequest> getAll();
+	
+	public List<BorrowRequest> getAllByType();
 
 }
