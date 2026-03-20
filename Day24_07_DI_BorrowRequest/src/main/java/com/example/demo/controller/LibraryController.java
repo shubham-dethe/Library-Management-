@@ -15,6 +15,14 @@ import com.example.demo.service.Book_Interface;
 
 @RestController
 public class LibraryController {
+	
+	private Book_Interface bookServiceImpl; 			//constructor injection which is prefred.
+	private Book_Interface magzineServiceImpl; 
+	
+	public LibraryController(Book_Interface bookServiceImpl, Book_Interface magzineServiceImpl) {
+		this.bookServiceImpl = bookServiceImpl;
+		this.magzineServiceImpl = magzineServiceImpl;
+	}
 
 	@Autowired
 	@Qualifier(value = "bookServiceImpl")
